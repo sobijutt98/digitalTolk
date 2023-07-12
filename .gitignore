@@ -1,0 +1,8 @@
+.idea/*
+purevpn-cms/wp-content/uploads/
+purevpn-cms/wp-content/debug.log
+Settings-Production.ini
+purevpn-cms/wp-content/wphb-cache/
+.vscode/
+purevpn-cms/wp-content/object-cache.php
+.DS_Store
