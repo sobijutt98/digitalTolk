@@ -1,45 +1,35 @@
-Do at least ONE of the following tasks: refactor is mandatory. Write tests is optional, will be good bonus to see it. 
-Please do not invest more than 2-4 hours on this.
-Upload your results to a Github repo, for easier sharing and reviewing.
+1. Structure and Organization:
+    The code is well-structured with appropriate namespaces, class names, and method names that reflect their purposes.
+    The controller's methods are separated based on their functionality, which promotes readability and maintainability.
+    Still there is room for improvement by splitting functions in to smaller functions for readability.
 
-Thank you and good luck!
+2. Code Comments:
+    The code lacks comments that explain the purpose of methods, their parameters, and the overall logic. Adding comments can help other developers understand the code more easily.
 
+3. Dependency Injection:
+   Dependency injection is used effectively in the constructor, which is considered a good practice for managing dependencies and improving testability.
 
+4. Conditional Logic:
+   The code contains conditional logic based on user roles, which can enhance flexibility and control over user access and actions.
 
-Code to refactor
-=================
-1) app/Http/Controllers/BookingController.php
-2) app/Repository/BookingRepository.php
+5. Single Responsibility Principle:
+   The methods seem to follow the Single Responsibility Principle, focusing on specific tasks. This improves the code's maintainability and reusability.
 
-Code to write tests (optional)
-=====================
-3) App/Helpers/TeHelper.php method willExpireAt
-4) App/Repository/UserRepository.php, method createOrUpdate
+6. Exception Handling:
+   There's some exception handling, such as in the resendSMSNotifications method, which is a good practice to handle potential errors gracefully.
 
+7. Data Validation:
+   There's no explicit data validation or input sanitization in the code. Input validation is crucial to prevent security vulnerabilities.
+   Introduce validation rules and possibly form requests to handle input validation in a more standardized way, making the code more organized and less prone to errors.
 
-----------------------------
+8. Query Building:
+   Direct SQL statements are not used, and Eloquent ORM seems to be used for database interactions, which is a recommended practice to protect against SQL injection and make database interactions more intuitive.
 
-What I expect in your repo:
+9. Formatting:
+   The code seems to follow consistent formatting practices, such as indentation and spacing, which is essential for code readability.
 
-X. A readme with:   Your thoughts about the code. What makes it amazing code. Or what makes it ok code. Or what makes it terrible code. How would you have done it. Thoughts on formatting, structure, logic.. The more details that you can provide about the code (what's terrible about it or/and what is good about it) the easier for us to assess your coding style, mentality etc
+10. Separation of Concerns:
+    The code combines data retrieval, manipulation, and response generation within the controller methods. Consider using dedicated service classes for business logic to improve separation of concerns and make the code more modular.
 
-And 
-
-Y.  Refactor it if you feel it needs refactoring. The more love you put into it. The easier for us to asses your thoughts, code principles etc
-
-
-IMPORTANT: Make two commits. First commit with original code. Second with your refactor so we can easily trace changes. 
-
-
-NB: you do not need to set up the code on local and make the web app run. It will not run as its not a complete web app. This is purely to assess you thoughts about code, formatting, logic etc
-
-
-===== So expected output is a GitHub link with either =====
-
-1. Readme described above (point X above) + refactored code 
-OR
-2. Readme described above (point X above) + refactored core + a unit test of the code that we have sent
-
-Thank you!
-
-
+11. Code Reusability:
+    Some parts of the code, like sending notifications, might benefit from being encapsulated into separate classes or services for better reusability and maintainability.
